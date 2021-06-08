@@ -1,0 +1,20 @@
+name: Rectangle Area
+
+on: push
+
+jobs:
+  find-area:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Install python
+        uses: actions/setup-python@v2
+      - run: pip install -r requirements.txt
+      - name: Test area
+        run: pytest .
+      - name: Build an image
+        run: docker build -t testnew -f dockerfiles/New .
+      - name: Run the container
+        run: docker run testnew
+
