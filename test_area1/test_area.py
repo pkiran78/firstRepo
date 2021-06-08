@@ -11,5 +11,3 @@ def test_area():
     assert area(2, 3) == 6
     time.sleep(2)
     logging.info("Test area method completed by {}".format(author))
-
-print test_area()
