@@ -13,6 +13,10 @@ Git Commands
     git remote add origin https://github.com/pkiran78/firstRepo.git
     git push -u origin main
 
-Git command to create new branch
+Git command to push changes to branch:
 
 	git checkout -b newBranch main
+	Make changes to file
+	git add <File-name>
+	git commit -m "message"
+	git push origin newBranch
